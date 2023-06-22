@@ -2,7 +2,10 @@ import React from 'react';
 import { Sidebar } from '../components/SidebarP';
 import { Navigation } from '../components/navbarDash';
 import db from '../assets/img/db.jpg';
-import Piechart from '../components/PieChart';
+import Piechart1 from '../components/Piechart/PieChart1';
+import Piechart2 from '../components/Piechart/PieChart2';
+import Piechart3 from '../components/Piechart/PieChart3';
+import Piechart4 from '../components/Piechart/PieChart4';
 
 export class Police extends React.Component {
   render() {
@@ -17,8 +20,17 @@ export class Police extends React.Component {
             <div className="col-lg-3 p-0">
               <Sidebar />
             </div>
-            <div className="col-lg-7 ">
-              <Piechart />
+            <div className="col-lg-1 ">
+              <Piechart1 />
+            </div>{' '}
+            <div className="col-lg-1 ">
+              <Piechart2 />
+            </div>{' '}
+            <div className="col-lg-1 ">
+              <Piechart3 />
+            </div>{' '}
+            <div className="col-lg-1 ">
+              <Piechart4 />
             </div>
           </div>
         </div>
