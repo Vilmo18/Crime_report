@@ -7,7 +7,7 @@ import { Navbar, Nav, Container} from 'react-bootstrap';
         <>
          <Navbar collapseOnSelect expand="lg" fixed="top" style={{backgroundColor: "#000",boxShadow: "0px 0px 15px darkgray"}}>
   <Container>
-  <Navbar.Brand href="" className='text-white fw-bold' >CRIME REPORT</Navbar.Brand>
+  <Navbar.Brand href="/" className='text-white fw-bold' >CRIME REPORT</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto fw-bold ">
