@@ -16,6 +16,7 @@ export class Login extends React.Component {
     };
   }
   //navigate = useNavigate();
+
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
@@ -37,8 +38,8 @@ export class Login extends React.Component {
           if (res.data.code === 202) {
             alert(res.data.message);
           } else if (res.data.code === 200) {
-            alert('connecté');
             this.setState({ islog: true });
+            alert('connecté');
 
             /*localStorage.setItem('id', res.data.id);
             localStorage.setItem('username', res.data.username);
@@ -59,11 +60,13 @@ export class Login extends React.Component {
   };
   render() {
     //const navigate = useNavigate();
-    const { isAuthenticated } = this.state.islog;
+    console.log(this.state.islog);
+    const isAuthenticated = this.state.islog;
 
     // Redirection vers une autre page si l'authentification est réussie
     if (isAuthenticated) {
-      return <Redirect to="/register" />;
+      console.log('ok');
+      return <Redirect to="/dashboard/police" />;
     }
     return (
       <div>
