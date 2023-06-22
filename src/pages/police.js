@@ -17,7 +17,7 @@ export class Police extends React.Component {
             <div className="col-lg-3 p-0">
               <Sidebar />
             </div>
-            <div className="col-lg-7 ">
+            <div className="col-lg-5 ">
               <Piechart />
             </div>
           </div>
