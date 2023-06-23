@@ -1,26 +1,16 @@
-import React, { Component } from 'react';
-import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
-class MapContainer extends Component {
-  render() {
-    const mapStyles = {
-      width: '100%',
-      height: '400px',
-    };
+import React, { useEffect } from 'react';
 
-    return (
-      <Map
-        google={this.props.google}
-        zoom={14}
-        style={mapStyles}
-        initialCenter={{ lat: 48.8566, lng: 2.3522 }} // Coordonnées de Paris, France
-      >
-        <Marker position={{ lat: 48.8566, lng: 2.3522 }} />{' '}
-        {/* Marqueur pour votre position */}
-      </Map>
-    );
-  }
+function GoogleMap() {
+  useEffect(() => {
+    const ifameData = document.getElementById('iframeId');
+    const lat = 3.8633472;
+    const lon = 11.5113984;
+    ifameData.src = `https://maps.google.com/maps?q=${lat},${lon}&hl=es;&output=embed`;
+  });
+  return (
+    <div>
+      <iframe id="iframeId" height="500px" width="100%"></iframe>
+    </div>
+  );
 }
-
-export default GoogleApiWrapper({
-  apiKey: 'AIzaSyCZ5aoAGlAvAtmBSdb0hvns4Ib48cSzHgE',
-})(MapContainer);
+export default GoogleMap;
