@@ -19,6 +19,7 @@ const PieChart = () => {
         console.log(err);
       }
     };
+
     misaj();
     //console.log(data);
   }, [data]);
