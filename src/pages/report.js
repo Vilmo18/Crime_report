@@ -103,6 +103,20 @@ export class Report extends React.Component {
                     className="col-lg-12 mt-1 rounded border-0"
                     style={{ backgroundColor: '#f3f3f3', height: '40px' }}
                   ></input>
+                  <select
+                    class="form-select form-select"
+                    id="type_crime"
+                    name="type_crime"
+                    onChange={this.handleChange}
+                    value={this.gravité}
+                    aria-label=".form-select-lg example"
+                    style={{ backgroundColor: '#f3f3f3', height: '40px' }}
+                  >
+                    <option selected>Open this select menu</option>
+                    <option value="Vol">Vol</option>
+                    <option value="Viol">Viol</option>
+                    <option value="Meurtre">Meutre</option>
+                  </select>
                   <label className="text mt-2">City</label>
                   <select
                     class="form-select form-select"

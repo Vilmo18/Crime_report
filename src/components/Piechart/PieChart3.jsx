@@ -11,7 +11,7 @@ const PieChart = () => {
   useEffect(() => {
     const misaj = async () => {
       try {
-        await axios.get('http://localhost:7777/Viol').then((res) => {
+        await axios.get('http://localhost:7777/api/stat/Viol').then((res) => {
           console.log(res.data);
           setData(res.data);
         });
