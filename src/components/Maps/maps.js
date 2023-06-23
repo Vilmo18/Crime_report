@@ -11,6 +11,7 @@ function GoogleMap() {
       ifameData.src = `https://maps.google.com/maps?q=${lat},${lon}&hl=es;&output=embed`;
     });
   });
+
   return (
     <div>
       <iframe id="iframeId" height="500px" width="100%"></iframe>
