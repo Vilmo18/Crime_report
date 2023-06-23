@@ -16,7 +16,7 @@ export class Navigation extends React.Component {
           }}
         >
           <Container>
-            <Navbar.Brand href="" className="text-white fw-bold">
+            <Navbar.Brand href="/" className="text-white fw-bold">
               CRIME REPORT
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
