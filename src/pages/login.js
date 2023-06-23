@@ -107,7 +107,7 @@ export class Login extends React.Component {
                   </div>
                   <div className="row d-flex justify-content-center pt-3 mx-1">
                     <input
-                      type="text"
+                      type="password"
                       name="password"
                       value={this.password}
                       onChange={this.handleChange}
