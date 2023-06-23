@@ -73,15 +73,7 @@ export class Sidebar extends React.Component {
                     AHP
                   </CDBSidebarMenuItem>
                 </NavLink>
-                 <NavLink
-                  exact
-                  to="/dashboard/statistics"
-                  activeClassName="activeClicked"
-                >
-                  <CDBSidebarMenuItem icon="chart-bar">
-                    Statistics
-                  </CDBSidebarMenuItem>
-                </NavLink>
+                 
 
 
                 <NavLink exact to="/#" activeClassName="activeClicked">
