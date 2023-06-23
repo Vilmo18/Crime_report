@@ -93,6 +93,7 @@ export class Login extends React.Component {
                   >
                     Login
                   </h2>
+
                   <div className="row d-flex justify-content-center mx-1">
                     <input
                       type="text"
