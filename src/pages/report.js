@@ -38,6 +38,8 @@ export class Report extends React.Component {
                   <label className="text mt-1"> Crime Type</label>
                   <input
                     type="text"
+                    id="type_crime" 
+                    name="type_crime"
                     placeholder="Enter the Crime Type 'Ex: Terrorism'"
                     className="col-lg-12 mt-1 rounded border-0"
                     style={{ backgroundColor: '#f3f3f3', height: '40px' }}
@@ -45,6 +47,8 @@ export class Report extends React.Component {
                   <label className="text mt-2"> Country</label>
                   <input
                     type="text"
+                    id="pays" 
+                    name="pays"
                     placeholder="Enter the Country"
                     className="col-lg-12 mt-1 rounded border-0"
                     style={{ backgroundColor: '#f3f3f3', height: '40px' }}
@@ -52,6 +56,8 @@ export class Report extends React.Component {
                   <label className="text mt-2"> City</label>
                   <input
                     type="text"
+                    id="ville" 
+                    name="ville"
                     placeholder="Enter the City"
                     className="col-lg-12 mt-1 rounded border-0"
                     style={{ backgroundColor: '#f3f3f3', height: '40px' }}
@@ -59,6 +65,8 @@ export class Report extends React.Component {
                   <label className="text mt-2"> District</label>
                   <input
                     type="text"
+                    id="quartier" 
+                    name="quartier"
                     placeholder="Enter the district"
                     className="col-lg-12 mt-1 rounded border-0"
                     style={{ backgroundColor: '#f3f3f3', height: '40px' }}
@@ -69,6 +77,8 @@ export class Report extends React.Component {
                   </label>
                   <input
                     type="number"
+                    id="nbre_victime" 
+                    name="nbre_victime"
                     placeholder="Enter the Victim number"
                     className="col-lg-12 mt-1 rounded border-0"
                     style={{ backgroundColor: '#f3f3f3', height: '40px' }}
@@ -76,6 +86,8 @@ export class Report extends React.Component {
                   <label className="text mt-2">Crime's gravity</label>
                   <select
                     class="form-select form-select"
+                    id="gravité" 
+                    name="gravité"
                     aria-label=".form-select-lg example"
                     style={{ backgroundColor: '#f3f3f3', height: '40px' }}
                   >
@@ -87,12 +99,16 @@ export class Report extends React.Component {
                   <label className="text mt-2">Add image (facultative)</label>
                   <input
                     type="file"
+                    id="image" 
+                    name="image"
                     accept="image/*"
                     multiple="multiple"
                   ></input>
                   <p className="text mt-4"> Description (max 500 caracters)</p>
                   <textarea
                     className="card shadow col-lg-12"
+                    id="description" 
+                    name="description"
                     placeholder="Add Text"
                     style={{ height: 150 }}
                   ></textarea>
