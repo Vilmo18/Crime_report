@@ -9,6 +9,7 @@ import crimes from '../assets/img/crimes.jpg';
 import enquete from '../assets/img/enquete.jpg';
 
 export class CrimeDP extends React.Component {
+  
   render() {
     return (
       <div>
@@ -16,7 +17,7 @@ export class CrimeDP extends React.Component {
           <div className="">
             <Navigation />
           </div>
-
+          
           <div className="row ">
             <div className="col-lg-3 p-0">
               <Sidebar />
@@ -38,9 +39,7 @@ export class CrimeDP extends React.Component {
                       </h4>
                       <p className=" text-secondary"> Mimboman - Yaoundé </p>
                       <p>
-                        eaque ipsa quae ab illo inventore veritatis et quasi
-                        architecto beatae vitae dicta sunt explicabo. Nemo
-                        voluptas...{' '}
+                        My mother was beaten by her husband who then fled. I am currently seriously injured and bathed in a pool of blood please help me...{' '}
                       </p>
                       <a
                         className=""
@@ -79,9 +78,7 @@ export class CrimeDP extends React.Component {
                       </h4>
                       <p className=" text-secondary"> Touba - Maroua </p>
                       <p>
-                        eaque ipsa quae ab illo inventore veritatis et quasi
-                        architecto beatae vitae dicta sunt explicabo. Nemo
-                        voluptas...{' '}
+                        Yesterday while I was returning, terrorists stopped me and beat me on the road around 8 p.m. I escaped by chance...{' '}
                       </p>
                       <a
                         className=""
@@ -120,9 +117,7 @@ export class CrimeDP extends React.Component {
                       </h4>
                       <p className=" text-secondary"> Moyo - Bambili </p>
                       <p>
-                        eaque ipsa quae ab illo inventore veritatis et quasi
-                        architecto beatae vitae dicta sunt explicabo. Nemo
-                        voluptas...{' '}
+                        My three children were kidnapped after school tonight. People say they saw them get into a red car with smoked windows...{' '}
                       </p>
                       <a
                         className=""
