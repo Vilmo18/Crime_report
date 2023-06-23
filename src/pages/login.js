@@ -66,7 +66,7 @@ export class Login extends React.Component {
     // Redirection vers une autre page si l'authentification est réussie
     if (isAuthenticated) {
       console.log('ok');
-      return <Redirect to="/dashboard/police" />;
+      return <Redirect to="/dashboard/victim" />;
     }
     return (
       <div>
@@ -93,6 +93,7 @@ export class Login extends React.Component {
                   >
                     Login
                   </h2>
+
                   <div className="row d-flex justify-content-center mx-1">
                     <input
                       type="text"
