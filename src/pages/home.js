@@ -52,6 +52,8 @@ export class Home extends React.Component {
 						<p>eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 							Nemo enim ipsam voluptatem quia voluptas... </p>
 						<a className="" style={{textDecoration: "none", color:"orange", cursor:"pointer"}}>See more >>> </a>
+						
+
 						</span>	
 					</div>
 				</div>
