@@ -40,6 +40,7 @@ const App = () => (
           <Route path="/dashboard/victim" component={Victim} />
           <Route path="/dashboard/crimes" component={CrimeDV} />
           <Route path="/dashboard/statistics" component={Statistics} />
+          <Route path="/dashboard/ahp" component={AHP} />
         </Switch>
       </div>
     </Router>
