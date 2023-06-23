@@ -2,8 +2,65 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import fond from '../assets/img/enquete.jpg';
 import Navbar from '../components/navbar';
+import axios from 'axios';
 
 export class Report extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pays: '',
+      ville: '',
+      quartier: '',
+      type_crime: '',
+      nbre_victime: '',
+      gravité: '',
+      image: '',
+      message: '',
+      description: '',
+    };
+  }
+  handleChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
+  handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axios
+        .post('http://localhost:5000/insert', {
+          pays: this.state.pays,
+          ville: this.state.ville,
+          quartier: this.state.quartier,
+          type_crime: this.state.type_crime,
+          nbre_victime: this.state.nbre_victime,
+          gravité: this.state.gravité,
+          image: this.state.image,
+          message: this.state.message,
+          description: this.state.description,
+        })
+        .then((res) => {
+          if (res.data.code === 404) {
+            alert(res.data.message);
+          } else if (res.data.code === 200) {
+            alert('connecté');
+            localStorage.setItem('id', res.data.id);
+            localStorage.setItem('username', res.data.username);
+            localStorage.setItem('TOKEN', 659287507);
+          } else if (res.data.code === 500) {
+            alert(res.data.message);
+          }
+          /*if (res.data.code === 200) {
+              alert(res.data.message);
+              console.log(res.data.data);
+            }*/
+          console.log(res.data.message);
+        });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   render() {
     return (
       <div>
@@ -34,39 +91,41 @@ export class Report extends React.Component {
                     intervention
                   </p>
                 </div>
-                <form className="  rounded ">
+                <form className="  rounded " onSubmit={this.handleSubmit}>
                   <label className="text mt-1"> Crime Type</label>
                   <input
                     type="text"
-                    id="type_crime" 
+                    id="type_crime"
+                    value={this.type_crime}
+                    onChange={this.handleChange}
                     name="type_crime"
                     placeholder="Enter the Crime Type 'Ex: Terrorism'"
                     className="col-lg-12 mt-1 rounded border-0"
                     style={{ backgroundColor: '#f3f3f3', height: '40px' }}
                   ></input>
-                  <label className="text mt-2"> Country</label>
-                  <input
-                    type="text"
-                    id="pays" 
-                    name="pays"
-                    placeholder="Enter the Country"
-                    className="col-lg-12 mt-1 rounded border-0"
-                    style={{ backgroundColor: '#f3f3f3', height: '40px' }}
-                  ></input>
-                  <label className="text mt-2"> City</label>
-                  <input
-                    type="text"
-                    id="ville" 
+                  <label className="text mt-2">City</label>
+                  <select
+                    class="form-select form-select"
+                    id="ville"
                     name="ville"
-                    placeholder="Enter the City"
-                    className="col-lg-12 mt-1 rounded border-0"
+                    onChange={this.handleChange}
+                    value={this.ville}
+                    aria-label=".form-select-lg example"
                     style={{ backgroundColor: '#f3f3f3', height: '40px' }}
-                  ></input>
-                  <label className="text mt-2"> District</label>
+                  >
+                    <option selected>Open this select menu</option>
+                    <option value="Yaoundé">Yaoundé</option>
+                    <option value="Bafoussam">Bafoussam</option>
+                    <option value="Douala">Douala</option>
+                  </select>
+
+                  <label className="text mt-2"> Quartier</label>
                   <input
                     type="text"
-                    id="quartier" 
+                    id="quartier"
+                    value={this.quartier}
                     name="quartier"
+                    onChange={this.handleChange}
                     placeholder="Enter the district"
                     className="col-lg-12 mt-1 rounded border-0"
                     style={{ backgroundColor: '#f3f3f3', height: '40px' }}
@@ -77,8 +136,10 @@ export class Report extends React.Component {
                   </label>
                   <input
                     type="number"
-                    id="nbre_victime" 
+                    id="nbre_victime"
                     name="nbre_victime"
+                    onChange={this.handleChange}
+                    value={this.number}
                     placeholder="Enter the Victim number"
                     className="col-lg-12 mt-1 rounded border-0"
                     style={{ backgroundColor: '#f3f3f3', height: '40px' }}
@@ -86,8 +147,10 @@ export class Report extends React.Component {
                   <label className="text mt-2">Crime's gravity</label>
                   <select
                     class="form-select form-select"
-                    id="gravité" 
+                    id="gravité"
                     name="gravité"
+                    onChange={this.handleChange}
+                    value={this.gravité}
                     aria-label=".form-select-lg example"
                     style={{ backgroundColor: '#f3f3f3', height: '40px' }}
                   >
@@ -99,23 +162,27 @@ export class Report extends React.Component {
                   <label className="text mt-2">Add image (facultative)</label>
                   <input
                     type="file"
-                    id="image" 
+                    value={this.image}
+                    id="image"
                     name="image"
                     accept="image/*"
+                    onChange={this.handleChange}
                     multiple="multiple"
                   ></input>
                   <p className="text mt-4"> Description (max 500 caracters)</p>
                   <textarea
                     className="card shadow col-lg-12"
-                    id="description" 
+                    id="description"
+                    value={this.description}
                     name="description"
+                    onChange={this.handleChange}
                     placeholder="Add Text"
                     style={{ height: 150 }}
                   ></textarea>
 
                   <div className="mt-4 mb-4 d-flex justify-content-center row">
                     <button
-                      type="button"
+                      type="submit"
                       className="btn rounded col-lg-5 text-white "
                       style={{ backgroundColor: 'orange' }}
                     >

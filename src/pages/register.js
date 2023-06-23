@@ -26,8 +26,6 @@ export class Register extends React.Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      //
-      //api-connexion-add-agent.onrender.com
       await axios
         .post('http://localhost:5000/register', {
           username: this.state.username,
