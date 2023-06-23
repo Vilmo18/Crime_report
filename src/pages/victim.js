@@ -2,7 +2,7 @@ import React from 'react';
 import { Sidebar } from '../components/SidebarV';
 import { Navigation } from '../components/navbarDash';
 import db from '../assets/img/db.jpg';
-
+import Maps from '../components/Maps/maps';
 export class Victim extends React.Component {
   render() {
     return (
@@ -17,7 +17,7 @@ export class Victim extends React.Component {
               <Sidebar />
             </div>
             <div className="col-lg-7 ">
-              <img src={db} />
+              <Maps />
             </div>
           </div>
         </div>
