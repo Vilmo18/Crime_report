@@ -43,7 +43,7 @@ export class Report extends React.Component {
           if (res.data.code === 404) {
             alert(res.data.message);
           } else if (res.data.code === 200) {
-            alert('connecté');
+            alert('Ajout du crime avec succes');
             localStorage.setItem('id', res.data.id);
             localStorage.setItem('username', res.data.username);
             localStorage.setItem('TOKEN', 659287507);

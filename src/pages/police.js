@@ -20,27 +20,15 @@ export class Police extends React.Component {
             <div className="col-lg-3 p-0">
               <Sidebar />
             </div>
-            <div className="col-lg-2 ">
+            <div className="col-lg-4 ">
               <Piechart1 />
-            </div>{' '}
-            <div className="col-lg-2 ">
-              <Piechart2 />
-            </div>{' '}
-            <div className="col-lg-2 ">
-              <Piechart3 />
-            </div>{' '}
-            <div className="col-lg-2 ">
+            </div>
+            <div className="col-lg-4 ">
               <Piechart4 />
             </div>{' '}
-         
-           
-           
-            </div>
-            
-
           </div>
         </div>
-   
+      </div>
     );
   }
 }
