@@ -55,6 +55,16 @@ export class Sidebar extends React.Component {
                     View all report
                   </CDBSidebarMenuItem>
                 </NavLink>
+                 <NavLink
+                  exact
+                  to="/dashboard/statistics"
+                  activeClassName="activeClicked"
+                >
+                  <CDBSidebarMenuItem icon="chart-bar">
+                    Statistics
+                  </CDBSidebarMenuItem>
+                </NavLink>
+
 
                 <NavLink exact to="/#" activeClassName="activeClicked">
                   <CDBSidebarMenuItem icon="fas fa-sign-out-alt">

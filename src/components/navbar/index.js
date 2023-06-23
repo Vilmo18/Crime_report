@@ -15,7 +15,7 @@ const Navbar = () => {
                     <NavLink to='/register'activeStyle> Register</NavLink>
                 </NavMenu>
                 <NavBtn>
-                    <NavBtnLink to='/login'>Login</NavBtnLink>
+                    <NavBtnLink to='/loginas'>Login</NavBtnLink>
                 </NavBtn>
             </Nav>
         </>

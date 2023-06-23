@@ -1,5 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
+
 import Navbar from '../components/navbar';
 import Fond from "../assets/img/knife.jpg";
 import about from "../assets/img/police.jpg";
@@ -7,11 +9,13 @@ import crime from "../assets/img/weapon.jpg";
 import crimes from "../assets/img/crimes.jpg";
 import enquete from "../assets/img/enquete.jpg";
 
+
 export class Home extends React.Component {
 
 	render() {
 		return (
 			<div>
+
 			<Navbar/>
 			
 			<div className="row-lg-12">
@@ -79,6 +83,8 @@ export class Home extends React.Component {
 						</span>	
 					</div>
 				</div>
+
+
 			</div>
 			</div>
  			<div className="py-4" style={{backgroundColor:"black"}}>
