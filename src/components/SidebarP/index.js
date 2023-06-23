@@ -41,10 +41,12 @@ export class Sidebar extends React.Component {
                 >
                   <CDBSidebarMenuItem icon="home">Dashboard</CDBSidebarMenuItem>
                 </NavLink>
-                <NavLink exact to="/report" activeClassName="activeClicked">
-                  <CDBSidebarMenuItem icon="user">
-                    My account
-                  </CDBSidebarMenuItem>
+                <NavLink
+                  exact
+                  to="/dashboard/victim"
+                  activeClassName="activeClicked"
+                >
+                  <CDBSidebarMenuItem icon="user">MAP</CDBSidebarMenuItem>
                 </NavLink>
                 <NavLink
                   exact
@@ -55,7 +57,7 @@ export class Sidebar extends React.Component {
                     View all report
                   </CDBSidebarMenuItem>
                 </NavLink>
-                 <NavLink
+                <NavLink
                   exact
                   to="/dashboard/statistics"
                   activeClassName="activeClicked"
@@ -74,7 +76,6 @@ export class Sidebar extends React.Component {
                   </CDBSidebarMenuItem>
                 </NavLink>
                  
-
 
                 <NavLink exact to="/#" activeClassName="activeClicked">
                   <CDBSidebarMenuItem icon="fas fa-sign-out-alt">

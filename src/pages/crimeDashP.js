@@ -7,7 +7,6 @@ import about from '../assets/img/police.jpg';
 import crime from '../assets/img/weapon.jpg';
 import crimes from '../assets/img/crimes.jpg';
 import enquete from '../assets/img/enquete.jpg';
-
 export class CrimeDP extends React.Component {
   
   render() {

@@ -14,7 +14,7 @@ import { CrimeDP } from './pages/crimeDashP';
 import { Victim } from './pages/victim';
 import { CrimeDV } from './pages/crimDashV';
 import { Statistics } from './pages/statistics';
-import {AHP } from './pages/ahp';
+import { AHP } from './pages/ahp';
 
 export { Register } from './pages/register';
 export { Login } from './pages/login';
@@ -24,7 +24,7 @@ export { CrimeDP } from './pages/crimeDashP';
 export { Victim } from './pages/victim';
 export { CrimeDV } from './pages/crimDashV';
 export { Statistics } from './pages/statistics';
-export {AHP } from './pages/ahp';
+export { AHP } from './pages/ahp';
 
 const App = () => (
   <div className="App">
@@ -41,8 +41,6 @@ const App = () => (
           <Route path="/dashboard/crimes" component={CrimeDV} />
           <Route path="/dashboard/statistics" component={Statistics} />
           <Route path="/dashboard/ahp" component={AHP} />
-
-
         </Switch>
       </div>
     </Router>
