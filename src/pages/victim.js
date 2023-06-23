@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sidebar } from '../components/SidebarV';
+import { Sidebar } from '../components/SidebarP';
 import { Navigation } from '../components/navbarDash';
 import db from '../assets/img/db.jpg';
 import Maps from '../components/Maps/maps';

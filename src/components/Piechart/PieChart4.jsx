@@ -22,7 +22,7 @@ const PieChart = () => {
 
     misaj();
     //console.log(data);
-  }, [data]);
+  }, [data1]);
   //  console.log(data1);
 
   return (
