@@ -66,6 +66,16 @@ export class Sidebar extends React.Component {
                     Statistics
                   </CDBSidebarMenuItem>
                 </NavLink>
+                <NavLink
+                  exact
+                  to="/dashboard/ahp"
+                  activeClassName="activeClicked"
+                >
+                  <CDBSidebarMenuItem icon="sticky-note">
+                    AHP
+                  </CDBSidebarMenuItem>
+                </NavLink>
+                 
 
                 <NavLink exact to="/#" activeClassName="activeClicked">
                   <CDBSidebarMenuItem icon="fas fa-sign-out-alt">

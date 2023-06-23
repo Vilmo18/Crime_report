@@ -7,7 +7,6 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/home';
 import { Login } from './pages/login';
-import { LoginV } from './pages/loginVictim';
 import { Register } from './pages/register';
 import { Report } from './pages/report';
 import { Police } from './pages/police';
@@ -15,7 +14,7 @@ import { CrimeDP } from './pages/crimeDashP';
 import { Victim } from './pages/victim';
 import { CrimeDV } from './pages/crimDashV';
 import { Statistics } from './pages/statistics';
-import { LoginAS } from './pages/loginAs';
+import { AHP } from './pages/ahp';
 
 export { Register } from './pages/register';
 export { Login } from './pages/login';
@@ -25,8 +24,7 @@ export { CrimeDP } from './pages/crimeDashP';
 export { Victim } from './pages/victim';
 export { CrimeDV } from './pages/crimDashV';
 export { Statistics } from './pages/statistics';
-export { LoginV } from './pages/loginVictim';
-export { LoginAS } from './pages/loginAs';
+export { AHP } from './pages/ahp';
 
 const App = () => (
   <div className="App">
@@ -35,9 +33,6 @@ const App = () => (
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/login" component={Login} />
-          <Route path="/loginv" component={LoginV} />
-          <Route path="/loginas" component={LoginAS} />
-
           <Route path="/register" component={Register} />
           <Route path="/report" component={Report} />
           <Route path="/dashboard/police" component={Police} />
