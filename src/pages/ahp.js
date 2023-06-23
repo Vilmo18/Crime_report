@@ -8,6 +8,7 @@ import Piechart3 from '../components/Piechart/PieChart3';
 import Piechart4 from '../components/Piechart/PieChart4';
 
 export class AHP extends React.Component {
+   
   render() {
     return (
       <div>
@@ -35,7 +36,19 @@ export class AHP extends React.Component {
                   <th scope="row">1</th>
                   <td>Terrosisim</td>
                   <td>Nkoabang</td>
-                  <td>Very hight</td>
+                  <td>Very serious</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Woman aggression</td>
+                  <td>Etoudi</td>
+                  <td>serious</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td> Children kidnapping</td>
+                  <td>Jouvence</td>
+                  <td>No big deal</td>
                 </tr>
                 
               </tbody>
